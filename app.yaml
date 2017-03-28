@@ -1,0 +1,6 @@
+
+# [START app_yaml]
+runtime: ruby
+env: flex
+entrypoint: bundle exec ruby app.rb -p $PORT
+# [END app_yaml]
