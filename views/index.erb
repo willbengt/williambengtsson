@@ -24,10 +24,10 @@
       <a href="#" editable-text="user.name">{{ user.name || "empty" }}</a>
     </div>
     <div ng-controller="EditableRowCtrl">
-      <table class="table table-bordered table-hover table-condensed">
+      <table class="table table-hover table-condensed">
         <thead>
           <tr style="font-weight: bold">
-            <th style="width:80%">Name</th>
+            <th style="width:80%">Category</th>
             <th style="width:20%"></th>
           </tr>
         </thead>
@@ -38,7 +38,7 @@
                 {{ user.name || 'empty' }}
               </span>
             </td>
-            <td>
+            <td><div style="height:30px; overflow:hidden">
               <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
                <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
                   <i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>
@@ -54,7 +54,8 @@
                 <button type="button" class="btn btn-danger" ng-click="removeUser($index)">
                   <i class="fa fa-times fa-lg" aria-hidden="true"></i>
                 </button>
-              </div>  
+              </div>
+              </div>
             </td>
           </tr>
         </tbody>

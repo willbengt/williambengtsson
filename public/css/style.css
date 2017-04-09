@@ -17,25 +17,19 @@ table {
     border-spacing: 0 5px;
 }
 
-.table-bordered {
-  border: none;
+.table {
+    margin-bottom: 0px;
 }
 
 thead th {
     background-color: #006DCC;
     color: white;
+    border: 1px solid #006DCC; 
 }
 
 tbody td {
     background-color: #EEEEEE;
-}
-
-.table-bordered th {
-  border: 1px solid #006DCC; 
-}
-
-.table-bordered td {
-  border: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 tr td:first-child,

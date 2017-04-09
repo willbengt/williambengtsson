@@ -16,9 +16,9 @@ wbApp.controller('FormCtrl', function($scope) {
 
 wbApp.controller('EditableRowCtrl', function($scope, $filter, $http) {
   $scope.users = [
-    {id: 1, name: 'awesome user1'},
-    {id: 2, name: 'awesome user2'},
-    {id: 3, name: 'awesome user3'}
+    {id: 1, name: 'Category1'},
+    {id: 2, name: 'Category2'},
+    {id: 3, name: 'Category3'}
   ]; 
 
   $scope.saveUser = function(data, id) {
