@@ -3,70 +3,67 @@
   <head>
     <title>william Bengtsson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/xeditable.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="js/xeditable.js"></script>
     <script src="js/app.js"></script>
   </head>
   <body ng-app="wbApp">
-    <div ng-controller="FirstController">
-      <span>Name:</span>
-      <input type="text" ng-model="first">
-      <input type="text" ng-model="last">
-      <button ng-click='updateMessage()'>Message</button>
-      <hr>
-      {{heading + message}}
-    </div>
-    <div ng-controller="FormCtrl">
-      <a href="#" editable-text="user.name">{{ user.name || "empty" }}</a>
-    </div>
-    <div ng-controller="EditableRowCtrl">
-      <table class="table table-hover table-condensed">
-        <thead>
-          <tr style="font-weight: bold">
-            <th style="width:80%">Category</th>
-            <th style="width:20%"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="user in users">
-            <td>
-              <span editable-text="user.name" e-name="name" e-form="rowform">
-                {{ user.name || 'empty' }}
-              </span>
-            </td>
-            <td><div style="height:30px; overflow:hidden">
-              <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
-               <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
-                  <i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>
-                </button>
-                <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
-                  <i class="fa fa-undo fa-lg" aria-hidden="true"></i>
-                </button>  
-              </form>
-              <div class="buttons" ng-show="!rowform.$visible">
-                <button type="button" class="btn btn-primary" ng-click="rowform.$show()">
-                  <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
-                </button>
-                <button type="button" class="btn btn-danger" ng-click="removeUser($index)">
-                  <i class="fa fa-times fa-lg" aria-hidden="true"></i>
-                </button>
-              </div>
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button type="button" class="btn btn-default" ng-click="addUser()">
-        <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
-      </button>
+    <div class="container-fluid">
+      <div class="row row-centered">
+        <div class="col-xs-10 col-centered">
+          <div ng-controller="EditableRowCtrl">
+            <table class="table table-hover table-condensed">
+              <thead>
+                <tr style="font-weight: bold">
+                  <th style="width:80%">Category</th>
+                  <th style="width:20%"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="user in users">
+                  <td>
+                    <span editable-text="user.name" e-name="name" e-form="rowform">
+                      {{ user.name || 'empty' }}
+                    </span>
+                  </td>
+                  <td>
+                    <div>
+                      <form editable-form name="rowform" onbeforesave="saveUser($data, user.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user">
+                       <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+                          <i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+                          <i class="fa fa-undo fa-lg" aria-hidden="true"></i>
+                        </button>  
+                      </form>
+                      <div class="buttons" ng-show="!rowform.$visible">
+                        <button type="button" class="btn btn-primary" ng-click="rowform.$show()">
+                          <i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-danger" ng-click="removeUser($index)">
+                          <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button type="button" class="btn btn-default" ng-click="addUser()">
+              <i class="fa fa-plus fa-lg" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-    <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/williambengtsson" data-format="inline" data-related="false"></script>
+    <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/williambengtsson" data-format="inline" data-related="false"></script>-->
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>
