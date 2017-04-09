@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.table-bordered {
+  border: none;
+}
+
+thead th {
+    background-color: #006DCC;
+    color: white;
+}
+
+tbody td {
+    background-color: #EEEEEE;
+}
+
+.table-bordered th {
+  border: 1px solid #006DCC; 
+}
+
+.table-bordered td {
+  border: 1px solid #ddd;
+}
+
+tr td:first-child,
+tr th:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+tr td:last-child,
+tr th:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
