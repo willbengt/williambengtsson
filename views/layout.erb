@@ -14,7 +14,7 @@
     <script src="/js/app.js"></script>
   </head>
   <body ng-app="wbApp">
-    <div class="container">
+    <div class="container" ng-controller="DropdownCtrl">
       <!-- Static navbar -->
       <nav class="navbar navbar-default" role="navigation">
         <div class="navbar-header">
@@ -31,27 +31,16 @@
             <li><a href="/info">Info</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!--<li class="uib-dropdown">
-              <a href="/" class="uib-dropdown-toggle" data-toggle="dropdown">Coding Space<b class="caret"></b></a>
-              <ul class="uib-dropdown-menu">
-                <li><a ui-sref="/codingspace/ml">Machine Learning</a></li>
-              </ul>
-            </li>-->
-                  <div ng-controller="DropdownCtrl">
-      <div class="btn-group" uib-dropdown is-open="status.isopen">
-      <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
-        Coding Space <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
-        <li role="menuitem"><a href="/codingspace/ml">Machine Learning</a></li>
-      </ul>
-    </div>
-    </div>
-
+            <li uib-dropdown is-open="status.isopen">
+            <a href="" uib-dropdown-toggle>
+              Coding Space <span class="caret"></span>
+            </a>
+            <ul uib-dropdown-menu>
+              <li><a href="/codingspace/ml">Machine Learning</a></li>
+            </ul>
           </ul>
         </div><!--/.nav-collapse -->
       </nav>
-
 
       <div>
         <%if @error then %>

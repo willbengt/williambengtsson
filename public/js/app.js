@@ -10,7 +10,7 @@ var wbApp = angular.module('wbApp', ['xeditable', 'ui.router', 'ui.bootstrap']);
 
 }]);*/
 
-wbApp.controller('DropdownCtrl', function($scope) {
+wbApp.controller('NavbarCtrl', function($scope) {
   $scope.status = {
     isopen: false
   };
